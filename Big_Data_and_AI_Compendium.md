@@ -91,15 +91,21 @@
     - Memcached - https://aws.amazon.com/elasticache/memcached/
   - **IBM Rd**: Databases for redis - https://cloud.ibm.com/databases/databases-for-redis
 
-## Graph Databases
+## Graph Databases: Purpose-built to store and navigate relationships.  Relationships are first-class citizens in graph databases, with most of the dbs value derived from relationships.  Nodes store data entities, and edges store relationships between entities.  An edge always has a start and end node, a type and direction, and can describe a parent-child relationship, action, ownership, etc.  No limit to number and kinds of relationships.  Traversing along joins are very fast, because they are persisted, not calculated.
   - **Amazon Neptune**: fraud detection, social networking, recommendation engines - https://aws.amazon.com/neptune/
-
+  - **neo4j**: Acid compliant transactional db with native graph storage and processing. - https://neo4j.com/  Also available on Google cloud, Neo4j Aura - https://neo4j.com/cloud/aura/
+  - **IBM Graph**: Enterprise-grade property graph as a service, based on Apache TinkerPop stack.  https://www.ibm.com/analytics/ca/en/technology/cloud-data-services/graph/
+  - **arangoDB**: Native multi-model db supporting k/v, document and graph models.  - https://www.arangodb.com/
+  - **Datastax enterprise graph**: A distributed cassandra graph db, optimized for enterprise applications, zero downtime, fast traversals at scale and real-time analysis of complex, related datasets. - https://www.datastax.com/products/datastax-graph
+  - **Microsoft Azure Cosmos DB with Gremlin API**: Azure Cosmos DB is globally distributed, multi-model db service supporting document, kv, graph and column-family data models.  https://docs.microsoft.com/en-us/azure/cosmos-db/graph-introduction
+  - 
 ## Time series DBs
   - **Amazon Timestream**: IoT apps, DevOps, industrial telemtery - https://aws.amazon.com/timestream
   - **Riak TS**:  Distributed, NoSQL database optimized for time-series use cases with unmatched resiliency beyond typical HA offerings.  Uses DVVs (Dotted Version Vectors)   to track logical time rather than chrological time to resolve object conflicts.  Spark connector, mesos framework, redis db integration (eventually consistency), CRDT (Conflict-free Replicated Data Types aka Convergent Replicated Data Type aka Commutative Replicated Data Type, etc) inspired data-types.
-  - 
+  -
 ## Ledger DBs
-  - **Amazon QLDB**: System or record, supply chain, registrations, banking transactions - https://aws.amazon.com/qldb
+  - **Amazon Quantum Ledger Database (QLDB)**: System or record, supply chain, registrations, banking transactions - https://aws.amazon.com/qldb
+
 
 ## Data Observability / Data Ops / ML Ops / Lineage
   - **Monte Carlo**: No-code integration to identify data issues (freshness/recency, volume, schema, distribution of duplicates and nulls, lineage to understand how data evolves), assess impact and alert teams. (Founded 2019, lf: Series B, Feb 2021) https://www.montecarlodata.com/
@@ -147,7 +153,10 @@
 
 
 ## BI / Visualizations
-
+  - **MS Power BI**: Top-notch data visualization capabilities - https://powerbi.microsoft.com/en-us/
+  - **Tableau Desktop**: One of the most mature offerings - https://www.tableau.com/
+  - **Domo**: https://www.domo.com/
+  - **QlikSense**: modern data analytics platform, one-of-a-kind associative analytics engine (provides temp views), Graph/relationship/association-based user-driven data exploration.  https://www.qlik.com/us/products/
 
 ## Notebooks
   - **Apache Zeppelin**:  A web-based notebook enabling data-driven, interactive data analytics and collaborative documents. (incub. rel. 7/23/2015, 0.9.0 rel 12/26/2020) - https://zeppelin.apache.org/
@@ -196,13 +205,19 @@
 ## Data Governance / Regulatory Compliance
 
 
-## Containers
-  -Providers
-    - Amazon EKS
-    - Google Cloud
-    - Azure Container Service (AKS)
-    - Cisco Container Platform (CCP)
-   - Frameworks
+## Container Providers
+
+  - **Amazon EKS**: Managed K8s service https://aws.amazon.com/eks
+  - **Google Cloud / GKE**: https://cloud.google.com/kubernetes-engine
+  - **Azure Container Service (AKS)**: https://azure.microsoft.com/en-us/product-categories/containers/
+  - **Cisco Container Platform (CCP)**: https://www.cisco.com/c/en/us/products/cloud-systems-management/container-platform/index.html
+  - **DigitalOcean**: https://www.digitalocean.com/products/kubernetes/
+  - **IBM Kubernetes Service**: https://www.ibm.com/cloud/kubernetes-service
+  - **Oracle Container Engine**: https://www.oracle.com/cloud-native/container-engine-kubernetes
+  - **HPE EZMERAL Container Platform**: https://www.hpe.com/us/en/solutions/container-platform.html
+
+
+## Container Frameworks
     - RedHat
     - SUSE
     - VMWare - vSPhere
@@ -211,7 +226,8 @@
     - Rancher
     - Ballerina
     - Cloud FOundary
-  - Monitoring
+
+## Container Monitoring
     - Datadog
     - Sumologic
     - New Relic
@@ -223,23 +239,26 @@
     - Dyantrace
     - Prometheus
     - Fluentd
-  - Management
-    - Spotinst MCS
-    - DigitalOcean
+
+## Container Management
+    - Spotinst MCS    
     - Giant Swarm
     - Kublr
     - Envoy
-  - Load Balancing
+
+## Container Load Balancing
     - AVI Networks
     - HAProxy
     - Nginx
-  - Security
+
+## Container Security
     - Aqua
     - Black duck 
     - Cilium
     - Twistlock
     - Alcide
-  - Tools
+
+## Container Tools
     - Jfrog
     - CloudBees
     - Univa

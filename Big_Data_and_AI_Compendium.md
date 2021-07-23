@@ -113,12 +113,46 @@
 
 ## Stream-processing / Pub-Sub
   - **Amazon Kinesis**: Collect, process and analyze video and data streams in real time.  Ingest Data Streams =>  Kinesis Data Analytics, Spark on EMR, EC2, AWS Lambda, custom apps. - https://aws.amazon.com/kinesis/
-  - Spark Streaming
-  - Kafka 
-  - Beam
-  - Pulsar
-  - Flink
-  - Storm
+  - Spark Streaming: An extension of core Spark API allowing real-time data processing from sources included, but not limited to Kafka, Flume and Kinesis.  Data can be processed and pushed to filesystems, dbs, live dashboards/bi or sinks. Fast recovery from failures/stragglers.  Better load balancing and resource usage.  Combine streaming and static datasets with interactive queries.  Native integration with advanced processing libraries (SQL, machine learning, graph processing).  Built on DStreams (Discretized streams), which provide an abstraction of the continuous stream of data and internally representing the data as a continuous series of RDDs. - https://spark.apache.org/docs/latest/streaming-programming-guide.html
+  - Kafka: An open source distributed event streaming platform with:
+    - High Throughput: Deliver msgs at network limited throughput (latencies as low as 2ms)
+    - Scalable: Scale prod clusters up to thousands of brokers, trillions of messages, hundreds of thousands of partitions.  Elastically expand/contract storage and processing.
+    - Permanent storage: Store streams of data in a distributed, durable and fault-tolerant clulster.
+    - High availability: Stretch clusters efficiently over availability zones/connect separate clusters across geo regions.
+    - Built in stream processing (join, agg, filter, transform, etc)
+    - Exactly once semantics availabile
+    - Tons of connectors to event sources and sinks
+    - Tons of client libraries and OS tools
+    - https://kafka.apache.org/
+  - Beam: Batch and streaming data processing using a single programming model.  Extensible, portable and open source.  Read from sources, process in beam (batch and streaming) and write out to sinks. (Java, python, go)
+    - Read/transform into a PCollection, operate PTransforms on data and output.   
+    - Mult. input and output sources
+    - Pipelines are setup in dag (directed acyclic graph) style
+    - https://beam.apache.org/
+  - Pulsar: Cloud-native distributed messaging and stremaing platform (from Yahoo, now apache):
+    - Production proven (millions of messages per sec across millions of topics)
+    - Horizontally scalablility
+    - Low latency with durability
+    - Geo-replication to configure replication across data centers across mult. geo regions
+    - apis: java, go, python, C++, node.js, websocket, c#
+  - Flink: Stateful computations over data streams.  A framework for distribvuted processing using stateful computations over unbounded (stream) and bounded (batch) data streams.  Computations performed in-memory, and at scale, running on all common cluster envs.  Stateful functions are small pieces of logic/code in multiple instances that represent entities.  (Similar to actors)  They are stateful (embdedded, fault-tolerant state, accessed like a variable), virtual (much like FaaS/lambda/serverless functions) they dont reserve resources and do not consume CPU/Memory in their inactive state. 
+    - Exactly once semantics
+    - Logical addressing (no service discovery needed, functions msg each others using logical addresses/pointers)
+    - Dynamic and cyclic messaging.  Not restritect to DAGs (cyclic) or dataflows (dynamic)
+    - Benefits:
+      - Dynamic messaging
+      - Consistent state
+      - Multi-lang support (anything that handles https req or gRPC)
+      - no db required, can use simple blob storage to store state snapshots
+      - cloud native for k8/knative/lambda hosting
+      - state access with stateless-style managability and benefits (rapid scalability, scale-to-zero and rolling/zero-downtime upgrades.
+  - Storm: Open source distributed, realtime computation system.  Process unbounded streams of data, real time processing with:
+    - clocked at 1million tuples procesed/per second/per node
+    - scalable and fault tolerant 
+    - Storm clusters are somewhat like hadoop clusters.  Instead of MR jobs, you run "topologies".  MR jobs run once and complete, Storm topologies run until ended.  
+    - Two kinds of nodes (worker, master)  Master runs Nimbus (similar to Hadoop jobtracker).  Nimbus distributes code, assigns tasks and monitors for failures.  Worker nodes run a daemon (Supervisor), it listens for work assigned to node and starts/stops worker processes.  Each worker executes a part of the topology, the running topology distributes worker processes across many machines.
+    - Uses zookeeper cluster between Numbis and Supervisor daemons, all state is stored in Zookeeper/local disk.
+    - https://storm.apache.org/
   - **nifi (Apache)**: Niagara Files - a dataflow management tool to collect, route, enrich, transform and process data in a reliable and scalable manner.  NiFi developed by NSA.  Web based UI, high configurability, back pressure handling, runtime flow modification.  Data provenance (lineage tracked from start to end). Designed for extension.  SSL/SSH/HTTPS/encrypted, policy management, mult-tenant authorization - https://nifi.apache.org/
   - **RocketMQ (Apache)**: Unified messaging engine, lightweight data processing platform.  Low latency, trillion-level message capacity guaranteed, finance oriented with high availablity and auditing features.  - https://rocketmq.apache.org/
   - **Confluent**: Cloud-native service for fully managed, self-serve provisioning, elastic scaling, Apache Kafka - https://www.confluent.io/confluent-cloud

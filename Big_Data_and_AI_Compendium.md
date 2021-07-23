@@ -91,7 +91,8 @@
     - Memcached - https://aws.amazon.com/elasticache/memcached/
   - **IBM Rd**: Databases for redis - https://cloud.ibm.com/databases/databases-for-redis
 
-## Graph Databases: Purpose-built to store and navigate relationships.  Relationships are first-class citizens in graph databases, with most of the dbs value derived from relationships.  Nodes store data entities, and edges store relationships between entities.  An edge always has a start and end node, a type and direction, and can describe a parent-child relationship, action, ownership, etc.  No limit to number and kinds of relationships.  Traversing along joins are very fast, because they are persisted, not calculated.
+## Graph Databases: 
+Purpose-built to store and navigate relationships.  Relationships are first-class citizens in graph databases, with most of the dbs value derived from relationships.  Nodes store data entities, and edges store relationships between entities.  An edge always has a start and end node, a type and direction, and can describe a parent-child relationship, action, ownership, etc.  No limit to number and kinds of relationships.  Traversing along joins are very fast, because they are persisted, not calculated.
   - **Amazon Neptune**: fraud detection, social networking, recommendation engines - https://aws.amazon.com/neptune/
   - **neo4j**: Acid compliant transactional db with native graph storage and processing. - https://neo4j.com/  Also available on Google cloud, Neo4j Aura - https://neo4j.com/cloud/aura/
   - **IBM Graph**: Enterprise-grade property graph as a service, based on Apache TinkerPop stack.  https://www.ibm.com/analytics/ca/en/technology/cloud-data-services/graph/

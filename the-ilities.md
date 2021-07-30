@@ -24,3 +24,94 @@ Referencing: Mark Richards. [Software Architecture Monday, Lesson 37 - Translati
 - regulatory compliance
 - mergers and acquisitions -> agility -> scalability -> learnability -> interoperability -> extensibility -> adaptability
 
+--- 
+### A more complete list of -ilities
+references:
+- https://en.wikipedia.org/wiki/List_of_system_quality_attributes
+- [Software Quality Standards](http://www.arisa.se/compendium/quality-metrics-compendium.html)
+
+### abbreviations: s/u: system or unit
+- accessibility: designed to be accessible to those with disabilities
+- accountability: commitment and transparency.  Accountability for my performance, the team, fair assessments of team, quality of shared codebase
+- accuracy: how accurate are values
+- adaptability: measures the amount of changes needed for adaption of software to different specified environments.
+- administrability: how easy is it to administer the system
+- affordability: how affordable is the system to put into prod. and run
+- agility:  how quickly can it adapt to business challenges in changing envs
+- auditability: how easily and thoroughly can the system be examined by outsiders
+- autonomy:  can the system work by itseld
+- availability: how reliably availble is the system
+- compatibility: 
+- composability:  
+- configurability: 
+- correctness: 
+- credibility: 
+- customizability: 
+- debuggability: 
+- degradability: 
+- determinability: 
+- demonstrability: 
+- dependability:  
+- deployability: 
+- discoverability:  
+- distributability: 
+- durability: 
+- effectiveness: 
+- efficiency: 
+- evolvability: 
+- extensibility: 
+- failure transparency: 
+- fault-tolerance: 
+- fidelity: 
+- flexibility: 
+- inspectability: 
+- installability: Measures the amount of effort needed to install the s/u into a specified environment.
+- integrity: 
+- interchangeability: 
+- interoperability:  How well software interacts with specified systems
+- learnability: Measures how well users can learn to use the software
+- localizability: 
+- maintainability: 
+- manageability: 
+- mobility: 
+- modifiability: 
+- modularity: 
+- observability: Provides ability to ask questions about env without knowing ahead of time what you want to ask.  Ask any arbitrary question and a s/u is observable to the extent you can answer it from observing without new instrumentation
+- operability: Measures how well or efficiently users can operate the system
+- orthogonality: 
+- portability: 
+- precision: 
+- predictability: 
+- process capabilities: 
+- producibility: 
+- provability: 
+- recoverability: Measures how well a s/u recovers from software faults or s/u failures
+- relevance: 
+- reliability: 
+- repeatability: 
+- reproducibility: 
+- resilience: 
+- responsiveness: 
+- reusability:  
+- robustness: 
+- safety: 
+- scalability: 
+- seamlessness: 
+- self-sustainability: 
+- serviceability (a.k.a. supportability): 
+- securability:  
+- simplicity: 
+- stability: 
+- standards compliance: 
+- survivability: 
+- sustainability: 
+- tailorability: 
+- testability: 
+- timeliness: 
+- traceability: 
+- transparency: 
+- ubiquity: 
+- understandability: A system should be documented and organized in a way that an engineer can easily comprehend and reason about it.  A s/u is understandable if it is: complete, concise, clear and organized.
+- upgradability: Capability of being improved in functionality by addition or replacement of components
+- usability: capacity of s/u to perform quantified objectives with effectiveness, efficiency and satisfaction in a quantified context of use
+- vulnerability: ability of a s/u to withstand effects of hostile environment
